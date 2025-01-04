@@ -9,11 +9,25 @@
 //server created
 const http = require('http')
 const fs = require('fs')
+const url = require('url')
+const path = require('path')
 const myserver = http.createServer((req, res)=>{
-    const log = `${new Date()}:requested\n`
+    const log = `${new Date()}:${req.url}requested\n`
     fs.appendFile('log.txt', log, ()=>{})
     console.log('Requested')
-    res.end('Kon hai be !!!')
+    switch (req.url) {
+        case "/":
+            fs.readFile(path.join(__dirname,'index.html'),(err, content)=>(res.end(content)))
+            break;
+        case "/about":
+            res.end('About Page')
+            break;
+        case "/home":
+            res.end('Welcome to Home Page')
+            break;
+        default:
+            res.end('Not Found 404 !')
+    }
 })
 
 myserver.listen(8080,()=>{
