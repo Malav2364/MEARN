@@ -1,0 +1,20 @@
+{
+  "name": "fproj",
+  "version": "1.0.0",
+  "description": "My first Project 😎",
+  "homepage": "https://github.com/Malav2364/MEARN-Collage6thsem-#readme",
+  "bugs": {
+    "url": "https://github.com/Malav2364/MEARN-Collage6thsem-/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Malav2364/MEARN-Collage6thsem-.git"
+  },
+  "license": "ISC",
+  "author": "Malav Patel",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
