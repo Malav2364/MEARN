@@ -8,7 +8,10 @@
 
 //server created
 const http = require('http')
+const fs = require('fs')
 const myserver = http.createServer((req, res)=>{
+    const log = `${new Date()}:requested\n`
+    fs.appendFile('log.txt', log, ()=>{})
     console.log('Requested')
     res.end('Kon hai be !!!')
 })
