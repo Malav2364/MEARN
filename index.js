@@ -8,8 +8,9 @@
 
 //server created
 const http = require('http')
-const myserver = http.createServer(()=>{
+const myserver = http.createServer((req, res)=>{
     console.log('Requested')
+    res.end('Kon hai be !!!')
 })
 
 myserver.listen(8080,()=>{
